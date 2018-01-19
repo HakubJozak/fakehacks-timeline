@@ -5,6 +5,7 @@ import auth from './authSaga';
 import routeDependencies from './routeDependenciesSaga';
 import formSaga from './formSaga';
 import init from './initAppSaga';
+import sourceSaga from './sourceSaga';
 
 import config from '../config/config';
 
@@ -17,6 +18,7 @@ export default function* () {
         formSaga(),
         auth(),
         init(),
+        sourceSaga(),
         routeDependencies(),
     ]);
 }

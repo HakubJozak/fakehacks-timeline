@@ -6,6 +6,7 @@ import translatable from './HOC/translatableHOC';
 import App from './components/AppComponent';
 import ErrorComponent from './components/Error/Error';
 
+import Source from './containers/Source';
 import Timeline from './containers/Timeline';
 
 export default (
@@ -13,7 +14,8 @@ export default (
         path="/"
         component={errorBoundary(ErrorComponent)(translatable(App))}
     >
-        <IndexRedirect to="timeline" />
+        <IndexRedirect to="source" />
+        <Route path="source" component={Source} />
         <Route path="timeline" component={Timeline} />
     </Route>
 );

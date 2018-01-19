@@ -28,6 +28,9 @@ export default {
         SET_LOCALE: 'SET_LOCALE',
         LOAD_LOCALE: 'LOAD_LOCALE',
     },
+    source: {
+        SUBMIT_URL: 'SUBMIT_URL',
+    },
     timeline: {
         ...createType('REQUEST_TIMELINE'),
     },

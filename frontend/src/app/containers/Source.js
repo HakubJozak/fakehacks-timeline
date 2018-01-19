@@ -2,16 +2,15 @@ import { compose, bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
-import Timeline from '../components/Timeline';
+import Source from '../components/Source';
 
-const mapStateToProps = (state, { location }) => ({
-    articles: state.timeline.articles,
-    checkUrl: location.query.url,
+const mapStateToProps = (state, ownProps) => ({
 });
+
 const mapDispatchToProps = dispatch => ({
 });
 
 export default compose(
     withRouter,
     connect(mapStateToProps, mapDispatchToProps),
-)(Timeline);
+)(Source);
