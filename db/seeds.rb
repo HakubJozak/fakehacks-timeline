@@ -1,7 +1,16 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Source.delete_all
+
+sources = [ [ 'db/blacklist.csv', -10 ], [ 'db/whitelist.csv', 10 ] ]
+
+sources.each do |file,trust|
+  File.new(file).read.each_line do |l|
+    Source.create!(
+      domain: l.split(',')[0].strip,
+      trust: trust
+    )
+  end    
+end
+
+
+
+puts "#{Source.count} sources listed"
