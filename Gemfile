@@ -61,6 +61,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'httparty'
 gem 'vcr'
 gem 'webmock'
+gem 'rack-cors'
+
 
 gem 'slim-rails'
 gem 'dotenv-rails'

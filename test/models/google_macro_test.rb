@@ -11,7 +11,7 @@ class GoogleMacroTest < ActiveSupport::TestCase
       url = 'http://cdn2.img.cz.sputniknews.com/images/149/45/1494505.jpg'
       doc = GoogleMacro.new.documents_for(url).first
       assert_not_nil doc.source
-      puts doc.to_json
+      assert_not_nil doc.to_json
     end
   end
 

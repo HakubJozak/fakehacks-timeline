@@ -4,7 +4,7 @@ class Document
   def initialize(hash)
     @url = hash['url']
     @google_indexed_at = 3.days.from_now
-    @google_updated_at = 2.days.from_now    
+    @google_updated_at = 2.days.from_now
   end
 
   def host
@@ -13,6 +13,12 @@ class Document
 
   def source
     @source ||= Source.find_by(domain: host)
+  end
+
+  def as_json(opts = nil)
+    # ping source
+    source
+    super
   end
 
 end
