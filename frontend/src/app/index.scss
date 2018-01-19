@@ -1,0 +1,20 @@
+@reset-global pc; // PostCSS reset plugin
+
+// VENDORS
+@import '~antd/lib/style/index.css';
+@import '~antd/lib/timeline/style/index.css';
+@import '~antd/lib/grid/style/index.css';
+
+//FONTS
+@import url('https://fonts.googleapis.com/css?family=Zilla+Slab:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700');
+
+//VARIABLES
+@import './variables.scss';
+
+//ANT DESIGN OVERRIDES
+//@import './antd-overrides.scss';
+
+body {
+    margin: 10px;
+}

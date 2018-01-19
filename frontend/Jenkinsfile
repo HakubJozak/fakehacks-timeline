@@ -1,0 +1,19 @@
+PipelineReact {
+    slackChannel = '#ci-web'
+    buildCommand = [
+        master: 'npm install && npm test && npm run build:prod',
+        stage: 'npm install && npm run build:stage',
+        development: 'npm install && npm run build:dev',
+    ]
+    baseURL = 'skeleton-frontend'
+    buildDir = 'build'
+
+    bucketURL = [
+        master: "gs://${baseURL}.ack.ee/",
+        stage: "gs://${baseURL}-stage.ack.ee/",
+        development: "gs://${baseURL}-development.ack.ee/",
+    ]
+    nodeEnv = '-e NODE_PATH=./app:./config'
+    nodeImage = 'node:6'
+    excludeDir = '.git'
+}

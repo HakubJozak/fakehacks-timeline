@@ -1,0 +1,17 @@
+menu.title: 'Abibuch'
+menu.user.logout: 'Odhlásit'
+
+languages.cs: 'Čeština'
+languages.en: 'Angličtina'
+
+loader.title: 'Načítám'
+loader.title.creating: 'Vytvářím'
+loader.title.updating: 'Ukládám'
+
+login.title: 'Abibuch'
+login.subtitle: 'Přihlašte se do systému'
+login.email: 'Přihlašovací jméno'
+login.password: 'Heslo'
+login.button: 'Přihlásit se'
+login.tip: 'Přihlašuji'
+login.error: 'Zadané jméno nebo heslo neexistuje'
