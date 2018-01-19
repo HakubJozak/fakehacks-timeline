@@ -4,6 +4,7 @@ import * as formActions from './FormActions';
 import * as translateActions from './TranslateActions';
 import * as timelineActions from './timelineActions';
 import * as sourceActions from './sourceActions';
+import * as sourcesActions from './sourcesActions';
 
 export {
     authActions,
@@ -12,6 +13,7 @@ export {
     translateActions,
     timelineActions,
     sourceActions,
+    sourcesActions,
 };
 
 export default {
@@ -21,4 +23,5 @@ export default {
     translate: translateActions,
     timeline: timelineActions,
     source: sourceActions,
+    sources: sourcesActions,
 };

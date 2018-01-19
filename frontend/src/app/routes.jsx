@@ -14,8 +14,7 @@ export default (
         path="/"
         component={errorBoundary(ErrorComponent)(translatable(App))}
     >
-        <IndexRedirect to="source" />
-        <Route path="source" component={Source} />
+        <IndexRoute component={Source} />
         <Route path="timeline" component={Timeline} />
     </Route>
 );

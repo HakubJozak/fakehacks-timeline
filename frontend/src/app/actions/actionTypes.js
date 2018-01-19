@@ -31,7 +31,12 @@ export default {
     source: {
         SUBMIT_URL: 'SUBMIT_URL',
     },
+    sources: {
+        ...createType('REQUEST_SOURCES'),
+        SET_SOURCES: 'SET_SOURCES',
+    },
     timeline: {
         ...createType('REQUEST_TIMELINE'),
+        SET_TIMELINE: 'SET_TIMELINE',
     },
 };
