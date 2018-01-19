@@ -1,0 +1,110 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://script.google.com/macros/s/AKfycbyx4MH1E6L6NRdDKlvCfjC3nxo0Yu3j75cV1L3vrU96rB791A/exec?url=http://cdn2.img.cz.sputniknews.com/images/149/45/1494505.jpg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Moved Temporarily
+    headers:
+      Content-Type:
+      - text/html; charset=UTF-8
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
+      Date:
+      - Fri, 19 Jan 2018 22:12:22 GMT
+      Location:
+      - https://script.googleusercontent.com/macros/echo?user_content_key=zHojxgTks8zb-luMCa9XrkXUeFs9yRJG1M2UQiYpzG1FkhbJ09zJpYlVIybfefCE3G2gl0ptBI67AjiykpSLKCfjUB5qktjxOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHa8yHYnQeIR2una5wp6ws9X5heUR-0Dvf3XUOwjkoNG2g6pYIzLA6R8Vsua7gt6XeGTy7g73BXzug9FAxgtBYK_aUlvOm9-jK9eZz8EXUXl5xQ-mW-oZ_fbGWKSCDoKHIpDVs0MLGrhk5m7WA3hIPrz2pVteBjaADMw&lib=MkP69O5EJoyZLWMmiIACoBleS6DrsjUUV
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337;
+        quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <HTML>
+        <HEAD>
+        <TITLE>Moved Temporarily</TITLE>
+        </HEAD>
+        <BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+        <H1>Moved Temporarily</H1>
+        The document has moved <A HREF="https://script.googleusercontent.com/macros/echo?user_content_key=zHojxgTks8zb-luMCa9XrkXUeFs9yRJG1M2UQiYpzG1FkhbJ09zJpYlVIybfefCE3G2gl0ptBI67AjiykpSLKCfjUB5qktjxOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHa8yHYnQeIR2una5wp6ws9X5heUR-0Dvf3XUOwjkoNG2g6pYIzLA6R8Vsua7gt6XeGTy7g73BXzug9FAxgtBYK_aUlvOm9-jK9eZz8EXUXl5xQ-mW-oZ_fbGWKSCDoKHIpDVs0MLGrhk5m7WA3hIPrz2pVteBjaADMw&amp;lib=MkP69O5EJoyZLWMmiIACoBleS6DrsjUUV">here</A>.
+        </BODY>
+        </HTML>
+    http_version: 
+  recorded_at: Fri, 19 Jan 2018 22:12:22 GMT
+- request:
+    method: get
+    uri: https://script.googleusercontent.com/macros/echo?lib=MkP69O5EJoyZLWMmiIACoBleS6DrsjUUV&user_content_key=zHojxgTks8zb-luMCa9XrkXUeFs9yRJG1M2UQiYpzG1FkhbJ09zJpYlVIybfefCE3G2gl0ptBI67AjiykpSLKCfjUB5qktjxOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHa8yHYnQeIR2una5wp6ws9X5heUR-0Dvf3XUOwjkoNG2g6pYIzLA6R8Vsua7gt6XeGTy7g73BXzug9FAxgtBYK_aUlvOm9-jK9eZz8EXUXl5xQ-mW-oZ_fbGWKSCDoKHIpDVs0MLGrhk5m7WA3hIPrz2pVteBjaADMw
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
+      Date:
+      - Fri, 19 Jan 2018 22:12:22 GMT
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337;
+        quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"url":"https://pl.sputniknews.com/trend/sily_powietrzne_rosji_w_syrii/"},{"url":"https://jp.sputniknews.com/opinion/?id=1088201&date=20151028T171100"}]'
+    http_version: 
+  recorded_at: Fri, 19 Jan 2018 22:12:22 GMT
+recorded_with: VCR 4.0.0
