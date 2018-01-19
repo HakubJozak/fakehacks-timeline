@@ -5,6 +5,7 @@ import Timeline from '../components/Timeline';
 
 const mapStateToProps = state => ({
     articles: state.timeline.articles,
+    checkUrl: state.timeline.checkUrl,
 });
 const mapDispatchToProps = dispatch => ({
 });

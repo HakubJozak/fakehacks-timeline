@@ -5,14 +5,16 @@ import AntdTimeline from 'antd/lib/timeline';
 import { Row, Col } from 'antd/lib/grid';
 import TimelineItem from './TimelineItem';
 
-const Timeline = ({ articles }) => {
+import './timeline.scss';
+
+const Timeline = ({ checkUrl, articles }) => {
     return (
-        <Row>
+        <Row className="timeline">
             <Row>
-                <Col offset={8}><h1>Timeline pro url <strong></strong></h1></Col>
+                <Col offset={1}><h1>Timeline pro url <strong>{checkUrl}</strong></h1></Col>
             </Row>
             <Row>
-                <Col offset={8}>
+                <Col offset={1}>
                     <AntdTimeline>
                         {articles.map((article, idx) =>
                             <TimelineItem key={idx} {...article} />
@@ -25,6 +27,7 @@ const Timeline = ({ articles }) => {
 };
 
 Timeline.propTypes = {
+    checkUrl: PropTypes.string.isRequired,
     articles: PropTypes.arrayOf(PropTypes.shape(TimelineItem.propTypes)).isRequired,
 };
 
