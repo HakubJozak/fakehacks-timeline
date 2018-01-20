@@ -18,5 +18,37 @@
 //@import './antd-overrides.scss';
 
 body {
-    padding: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.withBackground {
+  background-image: url(https://images.unsplash.com/photo-1495568995596-9e40959aa178?auto=format&fit=crop&w=2006&q=80);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: center;
+
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+form {
+  margin-top: 1em;
+}
+
+input[name="url"] {
+    font-size: 24px;
+    padding: 20px;
+    width: 100%;
+    margin-top: 15em;
+}
+
+.ant-btn-primary {
+    font-size: 20px;
+    background-color: #ffeb3b;
+    color: black;
 }

@@ -22,8 +22,7 @@ class SourceForm extends React.Component {
                     name="url"
                     component={Input}
                     type="text"
-                    label={'Zkontrolovat tento obrázek'}
-                    withLabel
+                    label={"Vyhledejte zdroje k URL obrázku"}
                     withRef
                 />
                 <button className="ant-btn ant-btn-primary" type="submit">
@@ -42,4 +41,3 @@ SourceForm.propTypes = {
 };
 
 export default SourceForm;
-

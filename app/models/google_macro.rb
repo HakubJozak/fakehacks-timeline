@@ -18,7 +18,5 @@ class GoogleMacro
       fail r.error
     end
   end
-  
+
 end
-
-

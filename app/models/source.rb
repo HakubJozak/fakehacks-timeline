@@ -9,7 +9,7 @@ class Source < ApplicationRecord
 
     subdomain = "%.#{domain}"
     where("name = ? OR name ILIKE ?", domain, subdomain)
-  }  
+  }
 
   def self.load_whitelist
     # [ 'db/blacklist.csv', -10 ],
@@ -23,7 +23,7 @@ class Source < ApplicationRecord
           name: name,
           trust: trust
         )
-      end    
+      end
     end
   end
 

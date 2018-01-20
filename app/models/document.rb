@@ -3,8 +3,16 @@ class Document
 
   def initialize(hash)
     @url = hash['url']
-    @title = hash['title']    
+    @title = hash['title']
     @date = parse_date(hash['date'])
+    @facebook = hash['facebook'] if hash['facebook'].present?
+#     "facebook{
+# "total_count":608,
+# "comment_count":159,
+# "comment_plugin_count":0,
+# "share_count":59,
+# "reaction_count":390}
+# }
   end
 
   def host
@@ -26,13 +34,13 @@ class Document
     return 1 if date.blank?
     return -1 if other.date.blank?
     date <=> other.date
-  end  
+  end
 
   private
 
   def find_source
     Source.by_domain(host).first ||
-      { domain: host } 
+      { domain: host }
   end
 
   def parse_date(date)

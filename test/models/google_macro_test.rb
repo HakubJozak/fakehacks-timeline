@@ -3,7 +3,8 @@ require 'test_helper'
 class GoogleMacroTest < ActiveSupport::TestCase
 
   setup do
-    Source.load_all
+    Source.load_whitelist
+    Source.load_konspiratori    
   end
   
   test 'image' do
