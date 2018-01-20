@@ -28,7 +28,7 @@ class UndatedResources extends React.Component {
 
         return (
             <Card
-                title="We are unable to determine date of these related resources"
+                title="Nedatováno"
                 extra={resources.length > UndatedResources.MIN_SHOW && (
                     <span role="button" onClick={this.toggle}>
                         { !showAll && <span className="more">{remaining}</span> }

@@ -2,12 +2,20 @@
     $margin-right: 5px;
     $icon-size: 14px;
 
+    a {
+        color: grey;
+    }
+
     &--trusted {
-        color: lightgreen;
+     /*    a {
+            color: lightgreen;
+        } */
     }
 
     &--untrusted {
-        color: lightcoral;
+        a {
+            color: lightcoral;
+        }
     }
 
     .anticon {

@@ -22,7 +22,7 @@ const Dashboard = ({ checkUrl, timeline, undated }) => {
         <Row className="Dashboard">
             <Row>
                 <Link to="/">
-                    <Button type="secondary" style={backButtonStyle}>Check another url</Button>
+                    <Button type="secondary" style={backButtonStyle}>Zkontroluj další obrázek</Button>
                 </Link>
             </Row>
             <Row gutter={8}>

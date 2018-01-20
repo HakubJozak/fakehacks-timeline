@@ -15,19 +15,19 @@ class SourceForm extends React.Component {
     render() {
         return (
             <form className="SourceForm" onSubmit={this.props.handleSubmit}>
-                { this.error && <Notification text="Fetching data failed, try it again (same url is prefilled)." /> }
+                { this.error && <Notification text="Načítání dat skončilo s chybou, zkuste to znovu (předvyplněna stejná url)." /> }
                 <Field
                     ref={input => { this.input = input; }}
                     id="url"
                     name="url"
                     component={Input}
                     type="text"
-                    label={'Check this url'}
+                    label={'Zkontrolovat tento obrázek'}
                     withLabel
                     withRef
                 />
                 <button className="ant-btn ant-btn-primary" type="submit">
-                    Check {this.props.isImage && <Icon type="picture" style={{ fontSize: 18 }} />}
+                    Zkontrolovat {this.props.isImage && <Icon type="picture" style={{ fontSize: 18 }} />}
                 </button>
 
             </form>

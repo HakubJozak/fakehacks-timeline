@@ -15,7 +15,7 @@ const mapStateToProps = (state, { location }) => ({
 const mapDispatchToProps = dispatch => ({
 });
 
-const TimelineWithLoader = loadable(Timeline, 'Loading timeline');
+const TimelineWithLoader = loadable(Timeline, 'Načítám data');
 
 export default compose(
     withRouter,
