@@ -9,8 +9,10 @@ class GoogleMacroTest < ActiveSupport::TestCase
   test 'image' do
     #    VCR.use_cassette("image") do
     url = 'http://cdn2.img.cz.sputniknews.com/images/149/45/1494505.jpg'
-    doc = GoogleMacro.new.documents_for(url).first
-    assert_not_nil doc.to_json
+    docs = GoogleMacro.new.documents_for(url)
+    assert_not_nil docs.first.source
+    assert_not_nil docs.to_json
+    puts docs.to_json
   end
 
   test 'image2' do

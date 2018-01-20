@@ -11,7 +11,7 @@ class Document
   end
 
   def source
-    @source ||= Source.find_by(domain: host)
+    @source ||= find_source
   end
 
   def as_json(opts = nil)
@@ -20,7 +20,7 @@ class Document
     super
   end
 
- def <=> other
+  def <=> other
     return 0 if date.blank? && other.date.blank?
     return 1 if date.blank?
     return -1 if other.date.blank?
@@ -28,6 +28,11 @@ class Document
   end  
 
   private
+
+  def find_source
+    Source.find_by(domain: host) ||
+      { domain: host } 
+  end
 
   def parse_date(date)
     if date.blank?
