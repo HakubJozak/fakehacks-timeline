@@ -2,6 +2,14 @@
     $margin-right: 5px;
     $icon-size: 14px;
 
+    &--trusted {
+        color: lightgreen;
+    }
+
+    &--untrusted {
+        color: lightcoral;
+    }
+
     .anticon {
         font-size: $icon-size;
         margin-right: $margin-right;

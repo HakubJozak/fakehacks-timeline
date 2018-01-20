@@ -1,6 +1,8 @@
 import { createSelector } from 'reselect';
 import _ from 'lodash';
 
+const sortByTrust = (a, b) => a.source.trust - b.source.trust;
+
 const dataSelector = state => state.timeline.data;
 
 export const timelineSelector = createSelector(
@@ -10,6 +12,7 @@ export const timelineSelector = createSelector(
 
         data
             .filter(item => item.date)
+            .sort(sortByTrust)
             .forEach(item => {
                 const last = _.last(grouped);
 
@@ -26,5 +29,10 @@ export const timelineSelector = createSelector(
 
 export const undatedResourcesSelector = createSelector(
     dataSelector,
-    data => data.filter(item => !item.date)
+    data => {
+        return data
+            .filter(item => !item.date)
+            .sort(sortByTrust);
+    }
 );
+

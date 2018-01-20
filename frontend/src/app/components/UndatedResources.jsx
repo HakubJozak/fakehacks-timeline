@@ -30,9 +30,9 @@ class UndatedResources extends React.Component {
             <Card
                 title="We are unable to determine date of these related resources"
                 extra={resources.length > UndatedResources.MIN_SHOW && (
-                    <span>
+                    <span role="button" onClick={this.toggle}>
                         { !showAll && <span className="more">{remaining}</span> }
-                        <Icon type={showAll ? 'up-circle-o' : 'down-circle-o'} onClick={this.toggle} />
+                        <Icon type={showAll ? 'up-circle-o' : 'down-circle-o'} />
                     </span>
 
                 )}

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FormattedDate, FormattedTime } from 'react-intl';
+import { FormattedDate } from 'react-intl';
 import Timeline from 'antd/lib/timeline';
 import Icon from 'antd/lib/icon';
 
