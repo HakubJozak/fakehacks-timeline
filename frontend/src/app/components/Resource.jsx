@@ -42,12 +42,15 @@ TrustIcon.defaultProps = {
     source: null,
 };
 
-const Resource = ({ url, source }) => {
+const Resource = ({ url, source, title }) => {
     const type = getType(source);
 
     return (
         <div className={`Resource Resource--${type}`}>
             <TrustIcon type={type} />
+            { title && (
+                <span className="Resource-title">{title}<br /></span>
+            )}
             <a target="_blank" href={url}>{url}</a>
         </div>
     );
@@ -56,11 +59,13 @@ const Resource = ({ url, source }) => {
 Resource.propTypes = {
     date: PropTypes.string,
     url: PropTypes.string.isRequired,
+    title: PropTypes.string,
     ...TrustIcon.propTypes,
 };
 
 Resource.defaultProps = {
     date: null,
+    title: null,
 };
 
 export default Resource;

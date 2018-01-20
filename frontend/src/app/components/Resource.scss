@@ -2,6 +2,8 @@
     $margin-right: 5px;
     $icon-size: 14px;
 
+    padding: 5px 0;
+
     a {
         color: grey;
     }
@@ -40,5 +42,9 @@
         border-radius: $icon-size / 2;
 
         vertical-align: middle;
+    }
+
+    & + .Resource {
+        border-top: 1px dashed gray;
     }
 }
