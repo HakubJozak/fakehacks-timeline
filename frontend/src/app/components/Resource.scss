@@ -20,9 +20,18 @@
         }
     }
 
+    &-title {
+        display: block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
     .anticon {
-        font-size: $icon-size;
+        float: left;
         margin-right: $margin-right;
+
+        font-size: $icon-size;
 
         &-exclamation-circle-o {
             color: red;
