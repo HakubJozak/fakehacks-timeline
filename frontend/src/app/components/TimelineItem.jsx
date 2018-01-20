@@ -3,11 +3,32 @@ import PropTypes from 'prop-types';
 import { FormattedDate } from 'react-intl';
 
 import Timeline from 'antd/lib/timeline';
+import Icon from 'antd/lib/icon';
+
+const getDot = (source) => {
+    if (!source) {
+        return <Icon type="question-circle-o" />;
+    }
+
+    const { trust } = source;
+
+    if (trust > 0) {
+        return <Icon type="check-circle-o" />;
+    }
+
+    if (trust < 0) {
+        return <Icon type="exclamation-circle-o" />;
+    }
+
+    return undefined;
+};
 
 const TimelineItem = ({ date, url, source }) => {
+    const dot = getDot(source);
+
     return (
-        <Timeline.Item>
-            <FormattedDate value={date} /> <a href={url}>{url}</a>
+        <Timeline.Item dot={dot} color={dot ? undefined : 'grey'}>
+            <FormattedDate value={date} /> <a target="_blank" href={url}>{url}</a>
         </Timeline.Item>
     );
 };
@@ -18,7 +39,11 @@ TimelineItem.propTypes = {
     source: PropTypes.shape({
         domain: PropTypes.string.isRequired,
         trust: PropTypes.number.isRequired,
-    }).isRequired,
+    }),
+};
+
+TimelineItem.defaultProps = {
+    source: null,
 };
 
 export default TimelineItem;

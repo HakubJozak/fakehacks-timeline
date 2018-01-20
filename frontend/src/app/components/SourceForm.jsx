@@ -6,21 +6,25 @@ import Button from 'antd/lib/button';
 import Input from './FormFields/Input';
 import './source-form.scss';
 
-const SourceForm = ({ handleSubmit }) => {
-    return (
-        <form className="source-form" onSubmit={handleSubmit}>
-            <Field
-                id="url"
-                name="url"
-                component={Input}
-                type="text"
-                label={'Check this url'}
-                withLabel
-            />
-            <button className="ant-btn ant-btn-primary" type="submit">Check</button>
+class SourceForm extends React.Component {
+    render() {
+        return (
+            <form className="source-form" onSubmit={this.props.handleSubmit}>
+                <Field
+                    ref={input => { this.input = input; }}
+                    id="url"
+                    name="url"
+                    component={Input}
+                    type="text"
+                    label={'Check this url'}
+                    withLabel
+                    withRef
+                />
+                <button className="ant-btn ant-btn-primary" type="submit">Check</button>
 
-        </form>
-    );
+            </form>
+        );
+    }
 };
 
 SourceForm.propTypes = {

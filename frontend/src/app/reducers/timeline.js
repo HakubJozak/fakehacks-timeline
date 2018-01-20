@@ -13,11 +13,15 @@ export default function(state = initialState, action) {
                 ...state,
                 fetching: true,
             };
+        case types.timeline.REQUEST_TIMELINE_COMPLETED:
+            return {
+                ...state,
+                fetching: false,
+            };
         case types.timeline.SET_TIMELINE:
             return {
                 ...state,
                 data: action.timeline,
-                fetching: false,
             };
         default:
             return state;

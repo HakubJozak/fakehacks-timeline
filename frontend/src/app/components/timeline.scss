@@ -1,4 +1,21 @@
-.timeline h1 {
-    font-size: 1.2em;
-    margin-bottom: 20px;
+@import '~antd/lib/timeline/style/index.css';
+
+.timeline {
+    h1 {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+
+    .anticon {
+        font-size: 20px;
+        color: grey;
+
+        &-exclamation-circle-o {
+            color: red;
+        }
+
+        &-check-circle-o {
+            color: lightgreen;
+        }
+    }
 }
