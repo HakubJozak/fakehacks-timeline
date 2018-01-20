@@ -9,9 +9,11 @@ class GoogleMacro
     r = self.class.get('/exec', query: { url: url })
 
     if r.success?
-      r.parsed_response.map do |d|
+      docs = r.parsed_response.map do |d|
         Document.new(d)
       end
+
+      docs.sort!
     else
       fail r.error
     end

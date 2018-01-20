@@ -1,10 +1,18 @@
 namespace :geneea do
   task fetch: :environment do
+    fetch(0,10000)
+  end
+
+  task f2: :environment do
+    fetch(10000, 20000)    
+  end
+
+  def fetch(offset, limit)
     api = Geneea.new
     current = 0
 
     loop do
-      all = Page.where(geneea_entities: nil).order(date: :desc).page(current).all
+      all = Page.where(geneea_entities: nil).order(date: :desc).limit(limit).offset(offset)
 
       all.each do |p|
         puts [ p.id, p.subject ].join(' - ')
@@ -22,8 +30,8 @@ namespace :geneea do
         break
       end
     end
-
   end
+  
 
   task :load do
     json = File.new('db/social_watch/export_geneea.json').read

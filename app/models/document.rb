@@ -1,10 +1,9 @@
 class Document
-  attr_accessor :url, :google_indexed_at, :google_updated_at
+  attr_accessor :url, :date
 
   def initialize(hash)
     @url = hash['url']
-    @google_indexed_at = 3.days.from_now
-    @google_updated_at = 2.days.from_now
+    @date = parse_date(hash['date'])
   end
 
   def host
@@ -19,6 +18,26 @@ class Document
     # ping source
     source
     super
+  end
+
+ def <=> other
+    return 0 if date.blank? && other.date.blank?
+    return 1 if date.blank?
+    return -1 if other.date.blank?
+    date <=> other.date
+  end  
+
+  private
+
+  def parse_date(date)
+    if date.blank?
+      @date = nil
+    else
+      @date = Time.parse(date)
+    end
+  rescue ArgumentError
+    Rails.logger.error($!)
+    @date = nil
   end
 
 end
