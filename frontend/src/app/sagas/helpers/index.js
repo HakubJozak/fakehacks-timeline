@@ -1,8 +1,8 @@
 import _ from 'lodash';
 import pathToRegex from 'path-to-regexp';
-import { put, select, all, takeLatest, takeEvery, call } from 'redux-saga/effects';
+import { routingSelector } from 'ackee-frontend-toolkit';
 
-import { routingSelector } from '../../selectors';
+import { put, select, all, takeLatest, takeEvery, call } from 'redux-saga/effects';
 
 /**
  * Single saga runner, automatic try-catch with _COMPLETED, _SUCCEEDED, _FAILED event dispatches

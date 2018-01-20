@@ -2,11 +2,7 @@ import types from '../actions/actionTypes';
 
 const initialState = {
     fetching: false,
-    articles: [
-        { date: '2018-01-12T23:37:00.000Z', url: 'http://foo', title: 'foo' },
-        { date: '2018-01-14T14:37:00.000Z', url: 'http://ba', title: 'ba' },
-        { date: '2018-01-14T14:37:00.000Z', url: 'http://bar', title: 'bar' },
-        { date: '2018-02-23T14:37:00.000Z', url: 'http://baz', title: 'baz' },
+    data: [
     ],
 };
 
@@ -20,7 +16,7 @@ export default function(state = initialState, action) {
         case types.timeline.SET_TIMELINE:
             return {
                 ...state,
-                articles: action.articles,
+                data: action.timeline,
                 fetching: false,
             };
         default:

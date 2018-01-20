@@ -1,6 +1,9 @@
-import { isEmpty } from 'lodash';
-import config from '../config/config';
+import { createSelector } from 'reselect';
+import { routingSelector } from 'ackee-frontend-toolkit';
 
 export const authSelector = state => state.auth;
 export const translateSelector = state => state.translate;
-export const routingSelector = state => state.routing.locationBeforeTransitions;
+export const checkUrlSelector = createSelector(
+    routingSelector,
+    routing => routing.query.url,
+);

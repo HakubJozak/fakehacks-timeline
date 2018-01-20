@@ -12,7 +12,9 @@ export default compose(
     connect(
         (state) => {
             return ({
-                initialValues: {},
+                initialValues: {
+                    url: 'http://cdn2.img.cz.sputniknews.com/images/149/45/1494505.jpg',
+                },
             });
         },
         (dispatch) => ({

@@ -4,10 +4,10 @@ import { FormattedDate } from 'react-intl';
 
 import Timeline from 'antd/lib/timeline';
 
-const TimelineItem = ({ date, url, title }) => {
+const TimelineItem = ({ date, url, source }) => {
     return (
         <Timeline.Item>
-            <FormattedDate value={date} /> <a href={url}>{title}</a>
+            <FormattedDate value={date} /> <a href={url}>{url}</a>
         </Timeline.Item>
     );
 };
@@ -15,7 +15,10 @@ const TimelineItem = ({ date, url, title }) => {
 TimelineItem.propTypes = {
     date: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
+    source: PropTypes.shape({
+        domain: PropTypes.string.isRequired,
+        trust: PropTypes.number.isRequired,
+    }).isRequired,
 };
 
 export default TimelineItem;

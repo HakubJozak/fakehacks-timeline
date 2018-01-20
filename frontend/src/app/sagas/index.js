@@ -6,8 +6,8 @@ import routeDependencies from './routeDependenciesSaga';
 import formSaga from './formSaga';
 import init from './initAppSaga';
 import sourceSaga from './sourceSaga';
-
-import config from '../config/config';
+import sourcesSaga from './sourcesSaga';
+import timelineSaga from './timelineSaga';
 
 /**
  * Root generator for all application sagas
@@ -19,6 +19,8 @@ export default function* () {
         auth(),
         init(),
         sourceSaga(),
+        sourcesSaga(),
+        timelineSaga(),
         routeDependencies(),
     ]);
 }
