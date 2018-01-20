@@ -1,15 +1,28 @@
 namespace :geneea do
   task fetch: :environment do
     api = Geneea.new
+    current = 0
 
-    Page.where(geneea_entities: nil).order(date: :desc).find_each do |p|
-      puts [ p.id, p.subject ].join(' - ')
-      p.geneea_sentiment = api.sentiment(p.text)['sentiment']
-      p.geneea_entities = api.entities(p.text)['entities']
-      p.geneea_topic = api.topic(p.text)['topic']
-      p.geneea_tags = api.tags(p.text)['tags']
-      p.save!
+    loop do
+      all = Page.where(geneea_entities: nil).order(date: :desc).page(current).all
+
+      all.each do |p|
+        puts [ p.id, p.subject ].join(' - ')
+        p.geneea_sentiment = api.sentiment(p.text)['sentiment']
+        p.geneea_entities = api.entities(p.text)['entities']
+        p.geneea_topic = api.topic(p.text)['topic']
+        p.geneea_tags = api.tags(p.text)['tags']
+        p.save!
+      end
+
+      if all.next_page.present?
+        current = all.next_page
+        puts [ 'Page' , current ].join(' - ')        
+      else
+        break
+      end
     end
+
   end
 
   task :load do

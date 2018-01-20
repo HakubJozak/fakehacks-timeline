@@ -69,6 +69,7 @@ gem 'dotenv-rails'
 gem 'simple_form'
 gem 'cells-rails'
 gem 'cells-slim'
+gem 'kaminari'
 
 group :development, :test do
   gem 'pry-rails'
