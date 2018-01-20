@@ -1,9 +1,15 @@
+
+@import '~antd/lib/card/style/index.css';
 @import '~antd/lib/timeline/style/index.css';
 
 .timeline {
     h1 {
         font-size: 1.2em;
         margin-bottom: 20px;
+    }
+
+    .ant-timeline {
+        margin-top: 20px;
     }
 
     .anticon {
@@ -17,5 +23,13 @@
         &-check-circle-o {
             color: lightgreen;
         }
+    }
+
+    .ant-card {
+        img {
+            max-width: 100%;
+        }
+
+        &-head-title {}
     }
 }
