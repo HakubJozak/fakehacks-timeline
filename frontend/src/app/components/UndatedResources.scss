@@ -1,0 +1,35 @@
+.UndatedResources {
+    .ant-card-head {
+        line-height: initial;
+
+        .anticon {
+            font-size: 18px;
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+
+        .more {
+            padding: 5px;
+            font-weight: bold;
+            background-color: #DEDEDE;
+            border-radius: 10px;
+
+            &:before {
+                content: '+ ';
+            }
+
+            &:after {
+                content: ' dalších';
+            }
+        }
+    }
+
+    .ant-card-body {
+        padding: 5px 10px;
+    }
+
+    .Resource {
+        margin-top: 5px;
+    }
+
+}

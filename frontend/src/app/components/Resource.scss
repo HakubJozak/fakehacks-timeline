@@ -1,0 +1,44 @@
+.Resource {
+    $margin-right: 5px;
+    $icon-size: 14px;
+
+    a {
+        color: grey;
+    }
+
+    &--trusted {
+     /*    a {
+            color: lightgreen;
+        } */
+    }
+
+    &--untrusted {
+        a {
+            color: lightcoral;
+        }
+    }
+
+    .anticon {
+        font-size: $icon-size;
+        margin-right: $margin-right;
+
+        &-exclamation-circle-o {
+            color: red;
+        }
+
+        &-check-circle-o {
+            color: lightgreen;
+        }
+    }
+    .empty {
+        display: inline-block;
+        width: $icon-size;
+        height: $icon-size;
+        margin-right: $margin-right;
+
+        border: 1px solid grey;
+        border-radius: $icon-size / 2;
+
+        vertical-align: middle;
+    }
+}

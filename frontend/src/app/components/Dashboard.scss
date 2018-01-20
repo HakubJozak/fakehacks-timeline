@@ -1,0 +1,39 @@
+
+@import '~antd/lib/card/style/index.css';
+@import '~antd/lib/timeline/style/index.css';
+
+.Dashboard {
+    h1 {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+
+    .ant-timeline {
+        margin-top: 20px;
+    }
+
+    .ant-card {
+        img {
+            max-width: 100%;
+        }
+
+        &-head {
+            height: auto;
+            padding: 10px;
+        }
+
+        &-head-title {
+            overflow: initial;
+            white-space: initial;
+
+            .title-inner {
+                line-height: 20px;
+                overflow-wrap: break-word;
+            }
+        }
+    }
+
+    .timeline-container {
+        padding-left: 10px !important; // need to override inline style
+    }
+}
