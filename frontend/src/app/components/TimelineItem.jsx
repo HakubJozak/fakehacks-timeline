@@ -7,7 +7,7 @@ import Icon from 'antd/lib/icon';
 
 const getDot = (source) => {
     if (!source) {
-        return <Icon type="question-circle-o" />;
+        return undefined;
     }
 
     const { trust } = source;
@@ -28,7 +28,7 @@ const TimelineItem = ({ date, url, source }) => {
 
     return (
         <Timeline.Item dot={dot} color={dot ? undefined : 'grey'}>
-            <FormattedDate value={date} />, <FormattedTime value={date} /><br />
+            <FormattedDate value={date} /><br />
             <a target="_blank" href={url}>{url}</a>
         </Timeline.Item>
     );
