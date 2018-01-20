@@ -13,6 +13,9 @@ const createType = (
 };
 
 export default {
+    app: {
+        CLOSE_NOTFICATION: 'CLOSE_NOTFICATION',
+    },
     auth: {
         LOGIN_FORM: 'LOGIN_FORM',
         ...createType('REQUEST_USER'),
@@ -30,6 +33,8 @@ export default {
     },
     source: {
         SUBMIT_URL: 'SUBMIT_URL',
+        URL_SUBMITTED: 'URL_SUBMITTED',
+        TRY_URL_AGAIN: 'TRY_URL_AGAIN',
     },
     sources: {
         ...createType('REQUEST_SOURCES'),

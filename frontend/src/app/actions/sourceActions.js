@@ -6,3 +6,15 @@ export function submitUrl() {
     };
 }
 
+export function urlSubmitted() {
+    return {
+        type: types.source.URL_SUBMITTED,
+    };
+}
+
+export function tryUrlAgain(url) {
+    return {
+        type: types.source.TRY_URL_AGAIN,
+        url,
+    };
+}

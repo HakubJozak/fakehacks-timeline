@@ -8,6 +8,7 @@ import translate from './translate';
 import errors from './errors';
 import timeline from './timeline';
 import sources from './sources';
+import source from './source';
 
 const rootReducer = combineReducers({
     auth,
@@ -17,6 +18,7 @@ const rootReducer = combineReducers({
     translate,
     timeline,
     sources,
+    source,
 });
 
 export default rootReducer;

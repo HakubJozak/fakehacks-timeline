@@ -5,6 +5,7 @@ import * as translateActions from './TranslateActions';
 import * as timelineActions from './timelineActions';
 import * as sourceActions from './sourceActions';
 import * as sourcesActions from './sourcesActions';
+import * as appActions from './appActions';
 
 export {
     authActions,
@@ -14,6 +15,7 @@ export {
     timelineActions,
     sourceActions,
     sourcesActions,
+    appActions,
 };
 
 export default {
@@ -24,4 +26,5 @@ export default {
     timeline: timelineActions,
     source: sourceActions,
     sources: sourcesActions,
+    app: appActions,
 };

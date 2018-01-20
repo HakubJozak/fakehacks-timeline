@@ -1,4 +1,4 @@
-.source-form {
+.SourceForm {
     padding: 50px;
     text-align: center;
 
@@ -8,5 +8,9 @@
 
     .ant-btn {
         margin-top: 10px;
+
+        .anticon-picture {
+            vertical-align: middle;
+        }
     }
 }
