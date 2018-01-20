@@ -3,39 +3,54 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Input from 'antd/lib/input';
 
-const InputField = ({
-    input,
-    label,
-    id,
-    disabled,
-    meta: { error, touched },
-    type,
-    withLabel,
-    style,
-    small,
-}) => (
-    <div
-        className={classnames(
-            'form-input',
-            {
-                'form-input--error': touched && error,
-                'form-input--small': small,
-            }
-        )}
-    >
-        {
-            withLabel && <label className="form-label" htmlFor={id}>{label}</label>
-        }
-        <Input
-            id={id}
-            disabled={disabled}
-            placeholder={!withLabel ? label : null}
-            type={type}
-            style={style}
-            {...input}
-        />
-    </div>
-);
+// eslint-disable-next-line react/prefer-stateless-function
+class InputField extends React.Component {
+    selectInputContent = () => {
+        const input = this.input.refs.input;
+
+        input.focus();
+        input.setSelectionRange(0, input.value.length);
+    }
+
+    render() {
+        const {
+            input,
+            label,
+            id,
+            disabled,
+            meta: { error, touched },
+            type,
+            withLabel,
+            style,
+            small,
+        } = this.props;
+
+        return (
+            <div
+                className={classnames(
+                    'form-input',
+                    {
+                        'form-input--error': touched && error,
+                        'form-input--small': small,
+                    }
+                )}
+            >
+                {
+                    withLabel && <label className="form-label" htmlFor={id}>{label}</label>
+                }
+                <Input
+                    id={id}
+                    disabled={disabled}
+                    placeholder={!withLabel ? label : null}
+                    type={type}
+                    style={style}
+                    ref={n => { this.input = n; }}
+                    {...input}
+                />
+            </div>
+        );
+    }
+}
 
 InputField.propTypes = {
     disabled: PropTypes.bool,

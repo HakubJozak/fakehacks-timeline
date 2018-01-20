@@ -12,6 +12,7 @@ export default function(state = initialState, action) {
             return {
                 ...state,
                 fetching: true,
+                data: [],
             };
         case types.timeline.REQUEST_TIMELINE_COMPLETED:
             return {

@@ -7,6 +7,10 @@ import Input from './FormFields/Input';
 import './source-form.scss';
 
 class SourceForm extends React.Component {
+    componentDidMount() {
+        this.input.getRenderedComponent().selectInputContent();
+    }
+
     render() {
         return (
             <form className="source-form" onSubmit={this.props.handleSubmit}>

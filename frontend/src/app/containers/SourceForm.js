@@ -13,7 +13,7 @@ export default compose(
         (state) => {
             return ({
                 initialValues: {
-                    url: 'http://cdn2.img.cz.sputniknews.com/images/149/45/1494505.jpg',
+                    url: 'http://forum24.cz/wp-content/uploads/2017/01/HOAX-uprchl%C3%ADci-768x576.jpg', //'http://cdn2.img.cz.sputniknews.com/images/149/45/1494505.jpg',
                 },
             });
         },
