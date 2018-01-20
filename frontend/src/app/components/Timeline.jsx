@@ -26,7 +26,7 @@ const Timeline = ({ checkUrl, timeline }) => {
             </Row>
             <Row>
                 <Col span={10}>
-                    <Card title={<strong title={checkUrl}>{checkUrl}</strong>} >
+                    <Card title={<div className="title-inner" title={checkUrl}>{checkUrl}</div>} >
                         <img src={checkUrl} alt={checkUrl} />
                     </Card>
                 </Col>

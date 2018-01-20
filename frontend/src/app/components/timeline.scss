@@ -30,6 +30,19 @@
             max-width: 100%;
         }
 
-        &-head-title {}
+        &-head {
+            height: auto;
+            padding: 10px;
+        }
+
+        &-head-title {
+            overflow: initial;
+            white-space: initial;
+
+            .title-inner {
+                line-height: 20px;
+                overflow-wrap: break-word;
+            }
+        }
     }
 }
