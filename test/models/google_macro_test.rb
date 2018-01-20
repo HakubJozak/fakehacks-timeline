@@ -26,8 +26,4 @@ class GoogleMacroTest < ActiveSupport::TestCase
     docs = GoogleMacro.new.documents_for(url)
   end  
 
-
-
-
-
 end

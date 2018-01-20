@@ -70,6 +70,7 @@ gem 'simple_form'
 gem 'cells-rails'
 gem 'cells-slim'
 gem 'kaminari'
+gem 'redis'
 
 group :development, :test do
   gem 'pry-rails'

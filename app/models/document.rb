@@ -3,6 +3,7 @@ class Document
 
   def initialize(hash)
     @url = hash['url']
+    @title = hash['title']    
     @date = parse_date(hash['date'])
   end
 

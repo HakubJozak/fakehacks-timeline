@@ -1,5 +1,9 @@
+- check = checks_path(format: :json, url: 'http://forum24.cz/wp-content/uploads/2017/01/HOAX-uprchl%C3%ADci-768x576.jpg')
+
 h1 Timeline
 
-= link_to sources_path(format: :json), sources_path(format: :json)
+ul
+  li = link_to sources_path(format: :json), sources_path(format: :json)
+  li= link_to check, check
 
 

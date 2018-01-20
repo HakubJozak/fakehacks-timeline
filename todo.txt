@@ -1,0 +1,4 @@
+[x] - oprava datumu a razeni
+[ ] - zdroje konspirator.sk -> blacklistu
+[ ] - titulek 
+api na obsah clanku a titulek - Geneea
