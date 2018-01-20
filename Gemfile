@@ -62,13 +62,14 @@ gem 'httparty'
 gem 'vcr'
 gem 'webmock'
 gem 'rack-cors'
-
+gem 'smarter_csv'
 
 gem 'slim-rails'
 gem 'dotenv-rails'
 gem 'simple_form'
 gem 'cells-rails'
 gem 'cells-slim'
+
 group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug'

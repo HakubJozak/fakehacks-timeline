@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_01_19_210405) do
+ActiveRecord::Schema.define(version: 2018_01_20_002121) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,10 +36,28 @@ ActiveRecord::Schema.define(version: 2018_01_19_210405) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "checks", force: :cascade do |t|
-    t.string "url"
+  create_table "pages", force: :cascade do |t|
+    t.string "uuid"
+    t.datetime "date"
+    t.string "type"
+    t.string "resource", limit: 2048
+    t.string "resource_url", limit: 2048
+    t.string "subject", limit: 2048
+    t.string "url", limit: 2048
+    t.text "text"
+    t.string "sentiment"
+    t.integer "like_count"
+    t.integer "comment_count"
+    t.integer "share_count"
+    t.string "author"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.json "geneea_entities"
+    t.json "geneea_topic"
+    t.json "geneea_tags"
+    t.json "geneea_sentiment"
+    t.string "fakehack_label"
+    t.index ["uuid"], name: "index_pages_on_uuid"
   end
 
   create_table "sources", force: :cascade do |t|
