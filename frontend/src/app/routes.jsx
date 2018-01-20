@@ -7,7 +7,7 @@ import App from './components/AppComponent';
 import ErrorComponent from './components/Error/Error';
 
 import Source from './containers/Source';
-import Timeline from './containers/Timeline';
+import Dashboard from './containers/Dashboard';
 
 export default (
     <Route
@@ -15,7 +15,7 @@ export default (
         component={errorBoundary(ErrorComponent)(translatable(App))}
     >
         <IndexRoute component={Source} />
-        <Route path="timeline" component={Timeline} />
+        <Route path="dashboard" component={Dashboard} />
     </Route>
 );
 

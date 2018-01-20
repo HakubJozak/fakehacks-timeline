@@ -10,14 +10,14 @@ import actions from '../actions/actions';
 export function* appSaga() {
 }
 
-export function* timelineSaga() {
+export function* dashboardSaga() {
     yield put(actions.timeline.requestTimeline());
     yield put(actions.sources.requestSources());
 }
 
 export const handlers = {
     '/': appSaga,
-    '/timeline': timelineSaga,
+    '/dashboard': dashboardSaga,
 };
 
 export default function* () {

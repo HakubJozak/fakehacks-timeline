@@ -1,13 +1,14 @@
 import { createSelector } from 'reselect';
 import _ from 'lodash';
 
-// eslint-disable-next-line import/prefer-default-export
+const dataSelector = state => state.timeline.data;
+
 export const timelineSelector = createSelector(
-    state => state.timeline.data,
-    timeline => {
+    dataSelector,
+    data => {
         const grouped = [];
 
-        timeline
+        data
             .filter(item => item.date)
             .forEach(item => {
                 const last = _.last(grouped);
@@ -21,4 +22,9 @@ export const timelineSelector = createSelector(
 
         return grouped;
     }
+);
+
+export const undatedResourcesSelector = createSelector(
+    dataSelector,
+    data => data.filter(item => !item.date)
 );

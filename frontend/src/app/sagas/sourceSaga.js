@@ -14,7 +14,7 @@ function* handleSubmitUrl(action) {
     let { data: { url } } = action;
 
     yield put(push({
-        pathname: '/timeline',
+        pathname: '/dashboard',
         search: `?url=${url}`,
     }));
     yield put(urlSubmitted());
