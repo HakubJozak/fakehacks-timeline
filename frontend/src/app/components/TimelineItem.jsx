@@ -1,46 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedDate, FormattedTime } from 'react-intl';
-
 import Timeline from 'antd/lib/timeline';
 import Icon from 'antd/lib/icon';
 
-const getDot = (source) => {
-    if (!source) {
-        return undefined;
-    }
+import Resource from './Resource';
 
-    const { trust } = source;
+import './TimelineItem.scss';
 
-    if (trust > 0) {
-        return <Icon type="check-circle-o" />;
-    }
-
-    if (trust < 0) {
-        return <Icon type="exclamation-circle-o" />;
-    }
-
-    return undefined;
-};
-
-const TimelineItem = ({ date, url, source }) => {
-    const dot = getDot(source);
+const TimelineItem = ({ items }) => {
+    const { date } = items[0];
 
     return (
-        <Timeline.Item dot={dot} color={dot ? undefined : 'grey'}>
+        <Timeline.Item color="grey" dot={<Icon type="calendar" />} >
             <FormattedDate value={date} /><br />
-            <a target="_blank" href={url}>{url}</a>
+            {
+                items.map((resource, idx) => (
+                    <Resource key={idx} {...resource} />
+                ))
+            }
         </Timeline.Item>
     );
 };
 
 TimelineItem.propTypes = {
-    date: PropTypes.string.isRequired,
-    url: PropTypes.string.isRequired,
-    source: PropTypes.shape({
-        domain: PropTypes.string.isRequired,
-        trust: PropTypes.number.isRequired,
-    }),
+    items: PropTypes.arrayOf(PropTypes.shape(Resource.propTypes)).isRequired,
 };
 
 TimelineItem.defaultProps = {

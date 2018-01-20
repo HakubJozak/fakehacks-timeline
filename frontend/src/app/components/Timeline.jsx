@@ -6,9 +6,9 @@ import AntdTimeline from 'antd/lib/timeline';
 import { Row, Col } from 'antd/lib/grid';
 import Card from 'antd/lib/card';
 import Button from 'antd/lib/button';
-import TimelineItem from './TimelineItem';
+import TimelineItem, { itemShape } from './TimelineItem';
 
-import './timeline.scss';
+import './Timeline.scss';
 
 const backButtonStyle = {
     width: '100%',
@@ -32,8 +32,8 @@ const Timeline = ({ checkUrl, timeline }) => {
                 </Col>
                 <Col offset={1} span={13}>
                     <AntdTimeline>
-                        {timeline.map((record, idx) =>
-                            <TimelineItem key={idx} {...record} />
+                        {timeline.map((dateItems, idx) =>
+                            <TimelineItem key={idx} items={dateItems} />
                         )}
                     </AntdTimeline>
                 </Col>
@@ -44,7 +44,7 @@ const Timeline = ({ checkUrl, timeline }) => {
 
 Timeline.propTypes = {
     checkUrl: PropTypes.string,
-    timeline: PropTypes.arrayOf(PropTypes.shape(TimelineItem.propTypes)).isRequired,
+    timeline: PropTypes.arrayOf(TimelineItem.propTypes.items).isRequired,
 };
 
 Timeline.defaultProps = {
