@@ -31,7 +31,7 @@ class Document
   private
 
   def find_source
-    Source.find_by(domain: host) ||
+    Source.by_domain(host).first ||
       { domain: host } 
   end
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_01_20_111441) do
+ActiveRecord::Schema.define(version: 2018_01_20_112935) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 2018_01_20_111441) do
     t.json "geneea_tags"
     t.json "geneea_sentiment"
     t.string "fakehack_label"
+    t.string "domain", limit: 2048
     t.index ["uuid"], name: "index_pages_on_uuid"
   end
 
@@ -65,6 +66,7 @@ ActiveRecord::Schema.define(version: 2018_01_20_111441) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.float "trust"
+    t.string "name"
   end
 
 end
