@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FormattedDate } from 'react-intl';
+import { FormattedDate, FormattedTime } from 'react-intl';
 
 import Timeline from 'antd/lib/timeline';
 import Icon from 'antd/lib/icon';
@@ -28,7 +28,8 @@ const TimelineItem = ({ date, url, source }) => {
 
     return (
         <Timeline.Item dot={dot} color={dot ? undefined : 'grey'}>
-            <FormattedDate value={date} /> <a target="_blank" href={url}>{url}</a>
+            <FormattedDate value={date} />, <FormattedTime value={date} /><br />
+            <a target="_blank" href={url}>{url}</a>
         </Timeline.Item>
     );
 };
